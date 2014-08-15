@@ -1,0 +1,18 @@
+# Output products list for <Ins_Mem>
+Ins_Mem.asy
+Ins_Mem.gise
+Ins_Mem.mif
+Ins_Mem.ngc
+Ins_Mem.sym
+Ins_Mem.v
+Ins_Mem.veo
+Ins_Mem.vhd
+Ins_Mem.vho
+Ins_Mem.xco
+Ins_Mem.xise
+Ins_Mem_flist.txt
+Ins_Mem_readme.txt
+Ins_Mem_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
+dist_mem_gen_ds322.pdf
+dist_mem_gen_readme.txt

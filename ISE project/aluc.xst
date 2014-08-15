@@ -1,0 +1,5 @@
+set -tmpdir "D:/single_CPU/xst/projnav.tmp"
+set -xsthdpdir "D:/single_CPU/xst"
+elaborate
+-ifn aluc.prj
+-ifmt mixed

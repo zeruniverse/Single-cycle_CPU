@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\single_CPU\CPU_top.ncd
+OUTFILE=D:\single_CPU\CPU_top.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=D:\single_CPU
+LICENSE=WebPack
+USER_INFO=0_0_0

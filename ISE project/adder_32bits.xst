@@ -1,0 +1,5 @@
+set -tmpdir "E:/3120101980/single_CPU/xst/projnav.tmp"
+set -xsthdpdir "E:/3120101980/single_CPU/xst"
+elaborate
+-ifn adder_32bits.prj
+-ifmt mixed

@@ -1,0 +1,56 @@
+Running: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/single_CPU/test_isim_beh.exe -prj D:/single_CPU/test_beh.prj work.test work.glbl 
+ISim M.81d (signature 0xcb73ee62)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file \"D:/single_CPU/ipcore_dir/Ins_Mem.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/timer_1ms.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/add_32bit.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/single_PC.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/sign_extend.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/RegFile.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/pbdebounce.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/ipcore_dir/Data_Mem.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/display.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/CPU_CTR.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/ALU_CTR.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/ALU.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/add.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/CPU_top.v\" into library work
+Analyzing Verilog file \"D:/single_CPU/test.v\" into library work
+Analyzing Verilog file \"C:/Xilinx/12.4/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/single_CPU/test.v" Line 41: Port rst is not connected to this instance
+WARNING:HDLCompiler:189 - "D:/single_CPU/test.v" Line 43: Size mismatch in connection of port <o_ins>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "D:/single_CPU/test.v" Line 44: Size mismatch in connection of port <o_pc>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "D:/single_CPU/test.v" Line 46: Size mismatch in connection of port <dpdata>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "D:/single_CPU/ALU.v" Line 30: Size mismatch in connection of port <Ctr>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/single_CPU/ALU.v" Line 31: Size mismatch in connection of port <Ctr>. Formal port size is 1-bit while actual signal size is 32-bit.
+Completed static elaboration
+Fuse Memory Usage: 94236 KB
+Fuse CPU Usage: 264 ms
+Compiling module timer_1ms
+Compiling module pbdebounce
+Compiling module single_pc
+Compiling module DIST_MEM_GEN_V5_1(C_FAMILY="spar...
+Compiling module Ins_Mem
+Compiling module RegFile
+Compiling module DIST_MEM_GEN_V5_1(C_FAMILY="spar...
+Compiling module Data_Mem
+Compiling module cpu_ctr
+Compiling module aluc
+Compiling module adder_1bit
+Compiling module adder_32bits
+Compiling module alu
+Compiling module sign_extend
+Compiling module display
+Compiling module add
+Compiling module CPU_top
+Compiling module test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 16 sub-compilation(s) to finish...
+Compiled 19 Verilog Units
+Built simulation executable D:/single_CPU/test_isim_beh.exe
+Fuse Memory Usage: 99848 KB
+Fuse CPU Usage: 452 ms

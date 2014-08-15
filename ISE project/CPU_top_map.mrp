@@ -1,0 +1,474 @@
+Release 12.4 Map M.81d (nt)
+Xilinx Mapping Report File for Design 'CPU_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off
+-c 100 -o CPU_top_map.ncd CPU_top.ngd CPU_top.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.52.76.2 $
+Mapped Date    : Sun May 04 12:05:40 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Total Number Slice Registers:         143 out of   3,840    3%
+    Number used as Flip Flops:          111
+    Number used as Latches:              32
+  Number of 4 input LUTs:               982 out of   3,840   25%
+Logic Distribution:
+  Number of occupied Slices:            551 out of   1,920   28%
+    Number of Slices containing only related logic:     551 out of     551 100%
+    Number of Slices containing unrelated logic:          0 out of     551   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,066 out of   3,840   27%
+    Number used as logic:               598
+    Number used as a route-thru:         84
+    Number used for Dual Port RAMs:     256
+      (Two LUTs used per Dual Port RAM)
+    Number used for 32x1 RAMs:          128
+      (Two LUTs used per 32x1 RAM)
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 29 out of     173   16%
+  Number of BUFGMUXs:                     3 out of       8   37%
+
+Average Fanout of Non-Clock Nets:                4.42
+
+Peak Memory Usage:  176 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network regfile/Mram_regfile_ren64/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 228 more times for the
+   following (max. 5 shown):
+   regfile/Mram_regfile_ren62/SPO,
+   regfile/Mram_regfile_ren61/SPO,
+   regfile/Mram_regfile_ren63/SPO,
+   regfile/Mram_regfile_ren60/SPO,
+   regfile/Mram_regfile_ren59/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 101 block(s) removed
+  20 block(s) optimized away
+ 109 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "ins/N1" is sourceless and has been removed.
+The signal "ins/N0" is sourceless and has been removed.
+The signal "data_mem/N1" is sourceless and has been removed.
+The signal "data_mem/N0" is sourceless and has been removed.
+The signal "data_mem/BU2/qdpo<0>" is sourceless and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<31>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<30>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<29>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<28>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<27>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<26>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<25>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<24>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<23>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<22>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<21>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<20>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<19>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<18>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<17>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<16>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<15>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<14>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<13>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<12>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<11>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<10>" is sourceless
+and has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<9>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<8>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<7>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<6>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<5>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<4>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<3>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<2>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<1>" is sourceless and
+has been removed.
+The signal "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int<0>" is sourceless and
+has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "i_pc<10>8" is unused and has been removed.
+The signal "i_pc<11>8" is unused and has been removed.
+The signal "i_pc<12>8" is unused and has been removed.
+The signal "i_pc<2>32" is unused and has been removed.
+The signal "i_pc<3>8" is unused and has been removed.
+The signal "i_pc<6>8" is unused and has been removed.
+The signal "i_pc<8>8" is unused and has been removed.
+The signal "i_pc<9>8" is unused and has been removed.
+The signal "regfile/N137" is unused and has been removed.
+The signal "regfile/N141" is unused and has been removed.
+The signal "regfile/N145" is unused and has been removed.
+The signal "regfile/N149" is unused and has been removed.
+The signal "regfile/N153" is unused and has been removed.
+The signal "regfile/N157" is unused and has been removed.
+The signal "regfile/N161" is unused and has been removed.
+The signal "regfile/N165" is unused and has been removed.
+The signal "regfile/N169" is unused and has been removed.
+The signal "regfile/N173" is unused and has been removed.
+The signal "regfile/N177" is unused and has been removed.
+The signal "regfile/N181" is unused and has been removed.
+The signal "regfile/N185" is unused and has been removed.
+The signal "regfile/N189" is unused and has been removed.
+The signal "regfile/N193" is unused and has been removed.
+The signal "regfile/N197" is unused and has been removed.
+The signal "regfile/N201" is unused and has been removed.
+The signal "regfile/N205" is unused and has been removed.
+The signal "regfile/N209" is unused and has been removed.
+The signal "regfile/N213" is unused and has been removed.
+The signal "regfile/N217" is unused and has been removed.
+The signal "regfile/N221" is unused and has been removed.
+The signal "regfile/N225" is unused and has been removed.
+The signal "regfile/N229" is unused and has been removed.
+The signal "regfile/N233" is unused and has been removed.
+The signal "regfile/N237" is unused and has been removed.
+The signal "regfile/N241" is unused and has been removed.
+The signal "regfile/N245" is unused and has been removed.
+The signal "regfile/N249" is unused and has been removed.
+The signal "regfile/N253" is unused and has been removed.
+The signal "regfile/N257" is unused and has been removed.
+The signal "regfile/N261" is unused and has been removed.
+The signal "regfile/N267" is unused and has been removed.
+The signal "regfile/N271" is unused and has been removed.
+The signal "regfile/N275" is unused and has been removed.
+The signal "regfile/N279" is unused and has been removed.
+The signal "regfile/N283" is unused and has been removed.
+The signal "regfile/N287" is unused and has been removed.
+The signal "regfile/N291" is unused and has been removed.
+The signal "regfile/N295" is unused and has been removed.
+The signal "regfile/N299" is unused and has been removed.
+The signal "regfile/N303" is unused and has been removed.
+The signal "regfile/N307" is unused and has been removed.
+The signal "regfile/N311" is unused and has been removed.
+The signal "regfile/N315" is unused and has been removed.
+The signal "regfile/N319" is unused and has been removed.
+The signal "regfile/N323" is unused and has been removed.
+The signal "regfile/N327" is unused and has been removed.
+The signal "regfile/N331" is unused and has been removed.
+The signal "regfile/N335" is unused and has been removed.
+The signal "regfile/N339" is unused and has been removed.
+The signal "regfile/N343" is unused and has been removed.
+The signal "regfile/N347" is unused and has been removed.
+The signal "regfile/N351" is unused and has been removed.
+The signal "regfile/N355" is unused and has been removed.
+The signal "regfile/N359" is unused and has been removed.
+The signal "regfile/N363" is unused and has been removed.
+The signal "regfile/N367" is unused and has been removed.
+The signal "regfile/N371" is unused and has been removed.
+The signal "regfile/N375" is unused and has been removed.
+The signal "regfile/N379" is unused and has been removed.
+The signal "regfile/N383" is unused and has been removed.
+The signal "regfile/N387" is unused and has been removed.
+The signal "regfile/N391" is unused and has been removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_0" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_1" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_10" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_11" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_12" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_13" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_14" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_15" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_16" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_17" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_18" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_19" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_2" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_20" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_21" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_22" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_23" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_24" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_25" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_26" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_27" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_28" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_29" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_3" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_30" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_31" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_4" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_5" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_6" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_7" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_8" (FF) removed.
+Unused block "data_mem/BU2/U0/gen_sp_ram.spram_inst/qspo_int_9" (FF) removed.
+Unused block "data_mem/BU2/XST_GND" (ZERO) removed.
+Unused block "data_mem/GND" (ZERO) removed.
+Unused block "data_mem/VCC" (ONE) removed.
+Unused block "ins/GND" (ZERO) removed.
+Unused block "ins/VCC" (ONE) removed.
+Unused block "regfile/Mram_regfile10" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile12" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile14" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile16" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile18" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile2" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile20" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile22" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile24" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile26" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile28" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile30" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile32" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile34" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile36" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile38" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile4" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile40" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile42" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile44" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile46" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile48" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile50" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile52" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile54" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile56" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile58" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile6" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile60" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile62" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile64" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile8" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren10" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren12" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren14" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren16" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren18" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren2" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren20" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren22" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren24" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren26" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren28" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren30" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren32" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren34" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren36" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren38" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren4" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren40" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren42" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren44" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren46" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren48" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren50" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren52" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren54" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren56" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren58" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren6" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren60" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren62" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren64" (RAM16X1D) removed.
+Unused block "regfile/Mram_regfile_ren8" (RAM16X1D) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+LUT3 		alucontrol/aluoper<2>_SW0
+LUT4 		i_pc<10>8
+LUT4 		i_pc<11>8
+LUT4 		i_pc<12>8
+LUT4 		i_pc<2>32
+LUT4 		i_pc<3>8
+LUT4 		i_pc<6>8
+LUT4 		i_pc<8>8
+LUT4 		i_pc<9>8
+GND 		ins/BU2/XST_GND
+LUT4 		regfile/write_ctrl5
+LUT4_D 		w1<0>1_SW1
+LOCALBUF 		w1<0>1_SW1/LUT4_D_BUF
+LUT4 		w1<0>1_SW3
+LUT4 		w1<3>1
+LUT4 		w1<3>1_1
+LUT4 		w1<3>1_2
+LUT4 		w1<4>1
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| dptype<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| dptype<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| exec                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| initype<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| initype<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| initype<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| initype<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| initype<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| initype<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| node<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| node<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| node<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| node<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| regselect<0>                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| regselect<1>                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| regselect<2>                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| regselect<3>                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| regselect<4>                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rst                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| segment<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| segment<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| segment<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| segment<3>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| segment<4>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| segment<5>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| segment<6>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| segment<7>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| stp                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
